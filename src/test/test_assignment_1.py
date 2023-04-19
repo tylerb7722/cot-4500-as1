@@ -83,19 +83,16 @@ if __name__ == "__main__":
     bfpa = ((2**(c-1023))*(1+f))
     print(bfpa,"\n")
 
-if __name__ == "__main__":
     normalized = bfpa*.001
     normalizedr = f'{normalized:.4f}'[:-1]
     chopping3 = normalizedr
     print(chopping3,"\n")
 
-if __name__ == "__main__":
     rounding3 = normalized+0.0005
     choppingr = f'{rounding3:.4f}'[:-1]
     unnormchoppingr = round(bfpa,0)
     print(choppingr, "\n")
 
-if __name__ == "__main__":
     AbsError = (abs(Decimal(normalized) - Decimal(choppingr)))
     AbsErrorR = f'{AbsError:.8f}'[:-1]
     print(AbsErrorR)
@@ -103,7 +100,6 @@ if __name__ == "__main__":
     RelativeError = (abs(Decimal(bfpa)-Decimal(unnormchoppingr))/(abs(Decimal(bfpa))))
     print(RelativeError, "\n")
 
-if __name__ == "__main__":
     infinite_series_atf1: str = "((-1**k)*((x**k)/(k**3)))"
     x:  int = 1
     check1: bool = check_for_alternating(infinite_series_atf1, )
@@ -117,15 +113,12 @@ if __name__ == "__main__":
     # 21 terms needed to calculate f(1) of the infinite series with error < 10**-4
     print("21\n")
 
-
-if __name__ == "__main__":
     # Bisection method
     left = -4
     right = 7
     function_string = "x**3 + (4*(x**2)) - 10"
     bisection_method(left, right, function_string)
 
-if __name__ == "__main__":
     # Newton Raphson method
     initial_approximation: float = 7
     tolerance: float = .0001
